@@ -1,0 +1,21 @@
+form {
+  position: absolute;
+  border: 2px solid #000000;
+  border-style: solid;
+  width: 350px;
+  padding: 25px;
+  margin-top: 150px;
+  margin-left: 551px;
+}
+
+h1 {
+  color: #209f90;
+}
+
+body{
+   background-image: linear-gradient(to right, #33b9a9, #ffff);
+}
+
+.imgcontainer{
+    position: center;
+}
