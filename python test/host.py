@@ -31,3 +31,7 @@ while 1:
     message = input(str("Enter message : "))
     conn.send(message.encode())
     print("Sent")
+    message = conn.recv(1024)
+    message = message.decode()
+    print(name, " : ", message)
+##chat##

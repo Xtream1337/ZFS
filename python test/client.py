@@ -25,5 +25,9 @@ print(s_name, "Has joined the chat")
 while 1:
     message = s.recv(1024)
     message = message.decode()
-    print(name, " ", message)
-    
+    print(name, " : ", message)
+    message = input(str("Enter message : "))
+    s.send(message.encode())
+    print("Sent")
+
+##chat##
