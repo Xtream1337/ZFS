@@ -1,0 +1,21 @@
+form {
+  border: 2px solid #000000;
+  border-style: solid;
+  width: 200px;
+  padding: 25px;
+  margin-top: 90px;
+  margin-left: 551px;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #209f90;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+body{
+   background-image: linear-gradient(to right, #33b9a9, #ffff);
+}
+
