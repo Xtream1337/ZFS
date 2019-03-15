@@ -26,3 +26,8 @@ s_name = conn.recv(1024)
 s_name = s_name.decode()
 print(s_name, "Has connected to chat room")
 conn.send(name.encode())
+
+while 1:
+    message = input(str("Enter message : "))
+    conn.send(message.encode())
+    print("Sent")

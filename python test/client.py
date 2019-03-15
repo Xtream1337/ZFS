@@ -18,6 +18,12 @@ print("connected")
 ##connection done###
 
 s.send(name.encode())
-s_name = s.recV(1024)
+s_name = s.recv(1024)
 s_name = s_name.decode()
 print(s_name, "Has joined the chat")
+
+while 1:
+    message = s.recv(1024)
+    message = message.decode()
+    print(name, " ", message)
+    
