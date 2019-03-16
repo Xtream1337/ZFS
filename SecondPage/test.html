@@ -6,6 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="test.css">
+    <script type="text/javascript">
+  function setCookie(cname, cvalue, exdays) 
+  {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+    user = prompt("Please enter your name:", "");
+    if (user != "" && user != null) {
+      setCookie("username", user, 1);
+    }
+  }
+}
+</script>
 </head>  
 <body>
 
@@ -18,9 +54,10 @@
         <!-- Float links to the right. Hide them on small screens -->
           
         <div class="w3-right w3-hide-small">
+            <p id="user" onclick="checkCookie()">Yo!</p>
             <a href="#Create room" class="w3-bar-item w3-button">Create room</a>
         <a href="#Join room" class="w3-bar-item w3-button">Join room</a>
-            <a href="Logout" class="w3-bar-item w3-button">Logout</a>
+            <a href="Log out" class="w3-bar-item w3-button">Logout</a>
         </div>
         </div>
     </div>
