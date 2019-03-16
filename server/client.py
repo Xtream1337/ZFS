@@ -1,4 +1,5 @@
 import socket
+import time
 
 s = socket.socket()
 port = 8080
@@ -18,10 +19,10 @@ while 1:
     print("Server: ", message)
     new_message = input(str("Enter message : "))
     new_message = new_message.encode()
+    #message = dict()
+    #message["msg"] = some text;
+    #message["username"] = username;
     s.send(new_message)
     print("Sent")
-    message = s.recv(1024)
-    message = message.decode()
-    print("Server: ", message)
 
 ##chat##

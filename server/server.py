@@ -7,17 +7,17 @@ print(host)
 #name = input(str("Username : "))
 s.listen(1)
 
-print("Waiting for connection 2")
+print("Waiting for 4 connection ")
 
-#conns = []
-#conns.append(conn1)
-conn, addr = s.accept()
-print ("1 recieved connection")
-conn.send("Welcome2".encode())
-print("Waiting  for connection 1")
-conn1, addr1 = s.accept()
-print ("2 recieved connection")
-conn1.send("Welcome2".encode())
+N=4
+conns = []
+for i in range(N):
+
+    conn, addr = s.accept()
+    conns.append(conn)
+    print("WELCOME  "+str(i))
+    conn.send("Welcome4".encode())
+
 ##s_name = conn.recv(1024)
 ##s_name = s_name.decode()
 ##print(s_name, "Has connected to chat room")
@@ -26,14 +26,18 @@ conn1.send("Welcome2".encode())
 while 1:
     message = input(str("Enter message : "))
     message = message.encode()
-    conn.send(message)
-    conn1.send(message)
-    print("Sent")
-    recv_message = conn.recv(1024)
-    print("client : ", recv_message.decode())
-    conn1.send(recv_message)
-    recv_message = conn1.recv(1024)
-    print("client : ", recv_message.decode())
-    conn.send(recv_message)
+    for conn in conns:
+        conn.send(message)
+        print("Sent")
+        
+    for conn in conns:
+        recv_message = conn.recv(1024)
+        print("client", recv_message.decode())
+        #recv_message["timestamp"] = datetime.now()
+        for other in conns:
+            if other != conn:
+                other.send(recv_message)
+
+    
 ##    message = message.decode()
 ##    print(name, " : ", message)
