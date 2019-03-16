@@ -3,23 +3,34 @@
 <head>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="first_page_design.css">
+  <script type="text/javascript">
+	function setCookie(value)
+	{
+    	document.cookie = "username" + value + "; path=/";
+    	return true;
+	}
+	function updateMessage() 
+	{
+    var t = document.form["login"].elements["uname"];
+    setCookie(t.value);
+    setTimeout(updateMessage, 100);
+	}
+updateMessage();
+</script>
+<h1>DTB</h1>
 </head>
 <body>
-
-<h1>DTB</h1>
-
-<form action="action_page.php">
+<form name = "login" action="file:///C:/Users/kati_/Desktop/HackTues365/ZFS/ZFS/SecondPage_Done/test.html">
     <div class="imgcontainer">
-    <img src="enter_your_name.png" alt="Login" class="avatar">
+    <img src="enteryourname.png" alt="Login" class="avatar">
     </div>
 
   <div class="container">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
-    	<button><a href="file:///C:/Users/kati_/Desktop/HackTues365/ZFS/ZFS/SecondPage/test.html">Continue</a></button>
+        <label id = "user" for="_user" value="customvalue"><b>Username</b></label>
+        <input id = "username" type="text" placeholder="Enter Username" name="uname" required>
+        <input type="submit" value="Continue">
         <br>
         <label><input type="checkbox" name="remember"> Remember me</label>
-      
   </div>
 </form>
     

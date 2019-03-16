@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
     <link rel="stylesheet" type="text/css" href="css/Main.css"/>
+     <script type="text/javascript">
+function getCookie() {
+    var cname = "Welcome, ";
+    var cookiesArray = document.cookie.split(';');
+    for (var i=0; i < cookiesArray.length; i++) {
+        var c = cookiesArray[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(cname) == 0) {
+            return c.substring(cname.length, c.length);
+        }
+    }
+    return null;
+}
+function clickLink(a) {
+    var url_part_from_cookierom_a = a.getAttribute('value');
+    var url_part_from_cookie = getCookie();
+       return false;
+    }</script>
 </head>  
 <body>
 
@@ -18,7 +36,7 @@
         <!-- Float links to the right. Hide them on small screens -->
           
             <div class="w3-right w3-hide-small">
-                <a href="Logout" class="w3-bar-item w3-button">Logout</a>
+                <a href="file:///C:/Users/kati_/Desktop/HackTues365/ZFS/ZFS/FirstPage_Done/firstpage.html" class="w3-bar-item w3-button">Logout</a>
             </div>
         </div>
     </div>
@@ -28,7 +46,7 @@
         <ul class="Nav">
             <li><a href="">Game 1</a>
                 <ul>
-                    <li><a href="">Create room</a></li>
+                    <li><a href="createroompage.html">Create room</a></li>
                     <li><a href="">Join room</a></li>
                 </ul>    
             </li>
