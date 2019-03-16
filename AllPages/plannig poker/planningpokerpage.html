@@ -4,8 +4,93 @@
 	<link rel="stylesheet" href="..\plannig poker\pokercss\planningpoker.css">
 </head>
 <body>
+    <script type = "text/javascript">
+        function sendMessage(msg){
+            // Wait until the state of the socket is not ready and send the message when it is...
+            waitForSocketConnection(ws, function(){
+                // console.log("message sent!!!");
+                ws.send(msg);
+           });
+        }
+
+        // Make the function wait until the connection is made...
+        function waitForSocketConnection(socket, callback){
+            setTimeout(
+                function () {
+                    if (socket.readyState === 1) {
+                        // console.log("Connection is made")
+                        if(callback != null){
+                            callback();
+                       }
+                        return;
+
+                   } else {
+                        console.log("wait for connection...")
+                        waitForSocketConnection(socket, callback);
+                   }
+
+               }, 5); // wait 5 milisecond for the connection...
+                sendMessage(JSON.stringify({
+                action: "draw",
+                n: n
+                }));
+                lized data_loaded = json.loads(data) #data loaded
+        function openSocket(url) {
+            var ws = new WebSocket(url);
+
+            ws.onopen = function() {
+            };
+
+            ws.onmessage = function (evt) {
+
+                let json = JSON.parse(evt.data);
+                console.log(json)
+                // alert(JSON.stringify(json));
+            }
+        }
+                }
+         function WebSocketTest() {
+            
+            if ("WebSocket" in window) {
+               alert("WebSocket is supported by your Browser!");
+               
+               ws = new WebSocket("ws://localhost:8080/ws");
+				
+               ws.onopen = function() {
+                  
+                  ws.send("Message to send");
+                  alert("Message is sent...");
+               };
+				
+               ws.onmessage = function (evt) { 
+                var received_msg = evt.data;
+                var para = document.createElement("p");                       // Create a <p> node
+                var t = document.createTextNode(received_msg);      // Create a text node
+                para.appendChild(t);                                          // Append the text to <p>
+                document.getElementById("myDIV").appendChild(para);           // Append <p> to <div> with id="myDIV"
+
+               };
+				
+               ws.onclose = function() { 
+                  
+                  // websocket is closed.
+                  alert("Connection is closed..."); 
+               };
+            } else {
+              
+               // The browser doesn't support WebSocket
+               alert("WebSocket NOT supported by your Browser!");
+            }
+         } 
+        WebSocketTest(); 
+      </script>
 	<h1>Scrum poker</h1>
 	<p class="one">Joined users:</p>
 	<p class="two">Discussion:</p>
+    <div id="myDIV">
+    <label id = "user" for="_user" value="customvalue"><b>Chat</b></label>
+    <textarea rows="4" cols="50" id = "txtName" type="text" placeholder="Write.." name="uname" required></textarea>
+    <button onclick="sendMessage()"> Send </button>
+</div>
 </body>
 </html>
