@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background: #FFF;<!--Photoshop-photo--->
+    
+}
+
+.img {
+    width: 100%;
+}
+
+.memory-card1{
+    margin-top: 100px;
+}
+
+.memory-card2{
+    margin-top: 100px;
+}
+
+.memory-card3{
+    margin-top: 100px;
+}
+
+.memory-card4{
+    margin-top: 100px;
+}
+
+.memory-card5{
+    margin-top: 100px;
+}
+
+front-face {
+    
+}
+
