@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="first_page_design.css">
+  <link  rel="icon" href="CardBack.png">
+  <script type="text/javascript">
+	function setCookie(value)
+	{
+    	document.cookie = "username" + value + "; path=/";
+    	return true;
+	}
+	function updateMessage() 
+	{
+    var t = document.form["login"].elements["uname"];
+    setCookie(t.value);
+    setTimeout(updateMessage, 100);
+	}
+updateMessage();
+</script>
+<h1>DTB</h1>
+</head>
+<body>
+
+<form name = "login" action="..\GamePage BezSnimki\index.html">
+    <div class="imgcontainer">
+    <img src="enteryourname.png" alt="Login" class="avatar">
+    </div>
+
+  <div class="container">
+        <label id = "user" for="_user" value="customvalue"><b>Username</b></label>
+        <input id = "username" type="text" placeholder="Enter Username" name="uname" required>
+        <input type="submit" value="Continue">
+        <br>
+        <label><input type="checkbox" name="remember"> Remember me</label>
+  </div>
+</form>
+    
+<!-- Navbar (sit on top) -->
+    
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="#home" class="w3-bar-item w3-button"><b>DTB</b></a>
+        </div>
+    </div>    
+    
+    
+</body>
+</html>

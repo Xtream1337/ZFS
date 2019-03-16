@@ -1,0 +1,265 @@
+html, body {
+   font-family: 'Pangolin', cursive;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #E5F2FB;
+}   
+
+
+
+.header {
+    background-image: url("../img/BusinessBackground.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+    color: black;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    
+}
+
+
+.header_title {
+    font-size: 100px;
+    margin-bottom: 199px;
+  
+
+}
+
+.header_arrow{
+    font-size: 48px;
+     width: 60px;
+    height:50 px;
+    margin-left: -15px;
+    
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+}
+
+.container {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.row:after {
+    clear: both;
+    content="";
+    display: table;
+}
+
+.Column {
+    width: 360px;
+    margin-right: 30px;
+    float: left;
+    
+}
+
+.Column:last-child {
+    margin-right: 0px;
+}
+
+<!---------------------------------------->
+
+.WindowsThemes {
+    padding-top: 70px;
+    padding-bottom: 100px;
+    
+}
+
+.portfolio-item {
+    margin-bottom: 20px;
+}
+
+
+.title {
+    font-size: 56px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-left: 35px;  
+}
+
+.ImgColumn {
+    margin-bottom: 17px;
+}
+
+.TitleColumn {
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.TitleColumn a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #FFF;
+}
+
+.TitleColumn a:hover {
+    color: #0052C2;
+    border-color: rgba(0, 82, 194, 0.3);
+}
+
+.TextColumn p {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    
+}
+
+
+.header1 {
+    background-image: url("../img/flag.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+    color: #FFF;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    
+}
+
+.header_title {
+    font-size: 100px;
+    margin-bottom: 30px;
+    margin-top: -50px;
+    
+}
+
+.header_arrow {
+    font-size: 100px;
+    width: 60px;
+    height: 50px;
+    margin-left: -30px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+     
+}
+
+
+/*                       PORTFOLIO                                       */
+
+
+
+.phar1__title {
+    text-align: center;
+    font-size: 40px;
+}
+
+
+.phar1__text {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.header2 {
+    background-image: url("../img/american-flag-hd.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+    color: #FFF;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    
+}
+
+.header3 {
+    background-image: url("../img/Japan%20Flag.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+    color: #FFF;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    
+}
+
+.header4 {
+    background-image: url("../img/Toyota%20supra.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+    color: #FFF;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+
+}
+
+/*      padashti menuta      */
+
+.Menu {
+    margin-top: -24px;
+    margin-left: 10%;
+    padding-bottom: 500px;
+}
+
+
+/*          Menuta            */
+
+.Nav li {
+    list-style: none;
+    position: relative;
+}
+
+.Nav li a{
+    font-size: 50px;
+    text-decoration: none; 
+    color: #fff;
+    display: block;
+    padding: 10px 30px;
+    background: #3c3c3c;
+    border: 1px solid #ccc;
+}
+
+.Nav li, .Nav li a{
+    float: left;
+}
+
+/*      menu style    */
+
+.Nav li ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 100%;
+    display: none;
+}
+
+.Nav li:hover > ul{
+    display: block;
+}
+
+
