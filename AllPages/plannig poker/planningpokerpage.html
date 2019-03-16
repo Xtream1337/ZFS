@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="..\plannig poker\pokercss\planningpoker.css">
+	<link rel="stylesheet" href="planningpoker.css">
+	<script>function setCookie() 
+{
+    document.cookie = "name=" + document.getElementById("txtName").value;
+    window.localStorage.setItem("name", document.getElementById("txtName").value)
+}
+
+function getCookie() 
+{
+
+    document.getElementById("txtName").value = window.localStorage.getItem("name");
+                        
+}
+document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("welcome").innerHTML = 
+       window.localStorage.getItem("name");
+});
+;</script>
 </head>
 <body>
 	<h1>Scrum poker</h1>
 	<p class="one">Joined users:</p>
+	<p style="color:green" id ="welcome" class ="three"></p>
 	<p class="two">Discussion:</p>
 </body>
 </html>

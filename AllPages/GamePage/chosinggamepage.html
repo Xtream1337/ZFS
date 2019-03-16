@@ -2,6 +2,7 @@
 <html lang="bg">
 <!------------------------------------------------>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -47,27 +48,8 @@ p.one{
     
     
     <link rel="stylesheet" href="css/main.css">
-    
-    
+    <link type="text/javascript" href="..\GamePage\js\welcome.js">
     <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
-  <script type="text/javascript">
-function setCookie() 
-{
-    document.cookie = "name=" + document.getElementById("txtName").value;
-    window.localStorage.setItem("name", document.getElementById("txtName").value)
-}
-
-function getCookie() 
-{
-
-    document.getElementById("txtName").value = window.localStorage.getItem("name");
-                        
-}
-document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("welcome").innerHTML = window.localStorage.getItem("name");
-});
-;
-</script>
 </head>
     
 <body>
@@ -93,6 +75,22 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+function setCookie() 
+{
+    document.cookie = "name=" + document.getElementById("txtName").value;
+    window.localStorage.setItem("name", document.getElementById("txtName").value)
+}
+
+function getCookie() 
+{
+
+    document.getElementById("txtName").value = window.localStorage.getItem("name");
+                        
+}
+document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("welcome").innerHTML = "Welcome," + window.localStorage.getItem("name");
+});
+;
 </script>
 
    <!-------------------------------------------->
@@ -105,7 +103,7 @@ function topFunction() {
           
             <div class="w3-right w3-hide-small">
              <p id ="welcome" class ="two"></p>
-                <a href="../FirstPage_Done/firstpage.html" class="one">Log out</a>
+                <a href="../index/index.html" class="one">Log out</a>
             </div>
         </div>
     </div> 
