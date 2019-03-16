@@ -1,0 +1,54 @@
+body{
+   background-image: linear-gradient(to right, #33b9a9, #ffff);
+}
+
+.Menu {
+    margin-top: 250px;
+    margin-left: 0%;
+}
+
+.Menu2 {
+    margin-top: 250px;
+    margin-left: 38%;
+}
+
+.Menu3 {
+    margin-top: 250px;
+    margin-left: 77%;
+}
+
+/*          Menuta            */
+
+.Nav li {
+    list-style: none;
+    position: relative;
+}
+
+.Nav li a{
+    font-size: 50px;
+    text-decoration: none; 
+    color: #fff;
+    display: block;
+    padding: 10px 30px;
+    background: #3c3c3c;
+    border: 1px solid #ccc;
+}
+
+.Nav li, .Nav li a{
+    float: left;
+}
+
+/*      menu style    */
+
+.Nav li ul {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 100%;
+    display: none;
+}
+
+.Nav li:hover > ul{
+    display: block;
+}
+
