@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", function() {
 </head>
 <body>
     <script type = "text/javascript">
+        function doSendMessage() {
+            sendMessage(JSON.stringify({
+                "username":   window.localStorage.getItem("name"),
+                "message": document.getElementById("messages").value
+                }));
+        }
         function sendMessage(msg){
             // Wait until the state of the socket is not ready and send the message when it is...
             waitForSocketConnection(ws, function(){
@@ -47,11 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
                    }
 
                }, 5); // wait 5 milisecond for the connection...
-                sendMessage(JSON.stringify({
-                action: "draw",
-                n: n
-                }));
-                lized data_loaded = json.loads(data) #data loaded
+                
         function openSocket(url) {
             var ws = new WebSocket(url);
 
@@ -103,12 +105,13 @@ document.addEventListener("DOMContentLoaded", function() {
       </script>
 	<h1>Scrum poker</h1>
 	<p class="one">Joined users:</p>
+            <div id="myDIV">
+    <label id = "user" for="_user" value="customvalue"><b>Chat</b></label>
+    <textarea rows="4" cols="50" id = "messages" type="text" placeholder="Write.." name="uname" required></textarea>
+    <button onclick="doSendMessage()"> Send </button>
+</div>
 	<p style="color:green" id ="welcome" class ="three"></p>
 	<p class="two">Discussion:</p>
-    <div id="myDIV">
-    <label id = "user" for="_user" value="customvalue"><b>Chat</b></label>
-    <textarea rows="4" cols="50" id = "txtName" type="text" placeholder="Write.." name="uname" required></textarea>
-    <button onclick="sendMessage()"> Send </button>
-</div>
+
 </body>
 </html>
