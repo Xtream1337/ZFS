@@ -3,7 +3,7 @@ p.one{
   border-style: solid;
   width: 230px;
   padding: 25px;
-  margin-top: 55px;
+  margin-top: 0px;
   margin-left: 1070px;
 }
 p.two{
@@ -12,16 +12,17 @@ p.two{
   width: 700px;
   height: 450px;
   padding: 25px;
-  margin-top:0px;
+  margin-top: -70px;
   margin-left: 0px;
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
 }
 p.three{
-  margin-top: 55px;
-  margin-left: 1070px;
+  margin-top: -45px;
+  margin-left: 1100px;
+  font-color: "#32CD32";
 }
 h1{
 	text-align: center;
-	font-size: 50px;
+	font-size: 40px;
 }
