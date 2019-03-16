@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="../index/css/first_page_design.css">
+  <link  rel="icon" href="../index/img/CardBack.png">
+  <link type="text/javascript" href="..\index\js\localStorage.js">
+  <script type="text/javascript">
+function setCookie() 
+{
+    document.cookie = "name=" + document.getElementById("txtName").value;
+    window.localStorage.setItem("name", document.getElementById("txtName").value)
+}
+
+function getCookie() 
+{
+
+    document.getElementById("txtName").value = window.localStorage.getItem("name");
+                        
+}
+</script>
+<h1>DTB</h1>
+</head>
+<body>
+<form name = "login" action="..\GamePage\index.html">
+    <div class="imgcontainer">
+    <img src="../index/img/enteryourname.png" alt="Login" class="avatar">
+    </div>
+
+  <div class="container">
+        <label id = "user" for="_user" value="customvalue"><b>Username</b></label>
+        <input id = "txtName" type="text" placeholder="Enter Username" name="uname" required>
+        <input type="submit" value="Continue" onclick="setCookie()">
+        <br>
+        <label><input type="checkbox" name="remember"> Remember me</label>
+  </div>
+</form>
+    
+<!-- Navbar (sit on top) -->
+    
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a href="#home" class="w3-bar-item w3-button"><b>DTB</b></a>
+        </div>
+    </div>    
+    
+    
+</body>
+</html>
