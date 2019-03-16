@@ -26,6 +26,13 @@ body {
 #myBtn:hover {
   background-color: #555;
 }
+p.two{
+  margin-top:0px;
+  margin-left: 100px;
+}
+p.one{
+  margin-top:0px;
+}
 
 </style>
 <!---------------------------------------------->
@@ -43,12 +50,24 @@ body {
     
     
     <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
-    
-    
+  <script type="text/javascript">
+function setCookie() 
+{
+    document.cookie = "name=" + document.getElementById("txtName").value;
+    window.localStorage.setItem("name", document.getElementById("txtName").value)
+}
 
+function getCookie() 
+{
 
-
-
+    document.getElementById("txtName").value = window.localStorage.getItem("name");
+                        
+}
+document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("welcome").innerHTML = window.localStorage.getItem("name");
+});
+;
+</script>
 </head>
     
 <body>
@@ -85,7 +104,8 @@ function topFunction() {
         <!-- Float links to the right. Hide them on small screens -->
           
             <div class="w3-right w3-hide-small">
-                <a href="Logout" class="w3-bar-item w3-button">Logout</a>
+             <p id ="welcome" class ="two"></p>
+                <a href="file:///C:/Users/kati_/Desktop/HackTues365/ZFS/ZFS/AllPages/FirstPage_Done/firstpage.html" class="one">Log out</a>
             </div>
         </div>
     </div> 

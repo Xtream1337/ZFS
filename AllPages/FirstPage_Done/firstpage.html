@@ -5,32 +5,31 @@
   <link rel="stylesheet" href="first_page_design.css">
   <link  rel="icon" href="CardBack.png">
   <script type="text/javascript">
-	function setCookie(value)
-	{
-    	document.cookie = "username" + value + "; path=/";
-    	return true;
-	}
-	function updateMessage() 
-	{
-    var t = document.form["login"].elements["uname"];
-    setCookie(t.value);
-    setTimeout(updateMessage, 100);
-	}
-updateMessage();
+function setCookie() 
+{
+    document.cookie = "name=" + document.getElementById("txtName").value;
+    window.localStorage.setItem("name", document.getElementById("txtName").value)
+}
+
+function getCookie() 
+{
+
+    document.getElementById("txtName").value = window.localStorage.getItem("name");
+                        
+}
 </script>
 <h1>DTB</h1>
 </head>
 <body>
-
-<form name = "login" action="..\GamePage BezSnimki\index.html">
+<form name = "login" action="file:///C:/Users/kati_/Desktop/HackTues365/ZFS/AllPages/GamePage%20BezSnimki/index.html">
     <div class="imgcontainer">
     <img src="enteryourname.png" alt="Login" class="avatar">
     </div>
 
   <div class="container">
         <label id = "user" for="_user" value="customvalue"><b>Username</b></label>
-        <input id = "username" type="text" placeholder="Enter Username" name="uname" required>
-        <input type="submit" value="Continue">
+        <input id = "txtName" type="text" placeholder="Enter Username" name="uname" required>
+        <input type="submit" value="Continue" onclick="setCookie()">
         <br>
         <label><input type="checkbox" name="remember"> Remember me</label>
   </div>
