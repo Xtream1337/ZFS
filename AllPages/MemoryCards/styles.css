@@ -5,11 +5,11 @@ html{
 
 body{
     margin: 0;
-    background: radial-gradient(#9D5900, #3D2200);
+    background: radial-gradient(#55F1D1, #3D2200);
 }
 
 .page-title{
-    color: #FF6D00;
+    color: black;
     font-family: Creepy, serif;
     font-weight: normal;
     text-align: center;
@@ -24,7 +24,7 @@ body{
 
 .game-info{
     font-family: Lunacy, serif;
-    color: #FFBB89;
+    color: black;
     font-size: 2em;
     border-radius: 15px;
 }
@@ -82,7 +82,7 @@ body{
     justify-content: center;
     align-items: center;
     z-index: 100;
-    color: #FF6D00;
+    color: red;
     font-family: Creepy, serif;   
 }
 
@@ -109,7 +109,7 @@ body{
 
 .card-back{
     background-color: black;
-    border-color: #FF6D00;
+    border-color: black;
 }
 
 .card-front{
