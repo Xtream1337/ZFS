@@ -7,10 +7,8 @@
     document.cookie = "name=" + document.getElementById("txtName").value;
     window.localStorage.setItem("name", document.getElementById("txtName").value)
 }
-
 function getCookie() 
 {
-
     document.getElementById("txtName").value = window.localStorage.getItem("name");
                         
 }
@@ -29,76 +27,57 @@ document.addEventListener("DOMContentLoaded", function() {
                 }));
         }
         function sendMessage(msg){
-            // Wait until the state of the socket is not ready and send the message when it is...
             waitForSocketConnection(ws, function(){
-                // console.log("message sent!!!");
                 ws.send(msg);
            });
         }
-
-        // Make the function wait until the connection is made...
         function waitForSocketConnection(socket, callback){
             setTimeout(
                 function () {
                     if (socket.readyState === 1) {
-                        // console.log("Connection is made")
                         if(callback != null){
                             callback();
                        }
                         return;
-
                    } else {
-                        console.log("wait for connection...")
                         waitForSocketConnection(socket, callback);
                    }
-
-               }, 5); // wait 5 milisecond for the connection...
+               }, 5); 
                 
         function openSocket(url) {
             var ws = new WebSocket(url);
-
             ws.onopen = function() {
             };
-
             ws.onmessage = function (evt) {
-
                 let json = JSON.parse(evt.data);
                 console.log(json)
-                // alert(JSON.stringify(json));
             }
         }
                 }
          function WebSocketTest() {
             
             if ("WebSocket" in window) {
-               alert("WebSocket is supported by your Browser!");
                
                ws = new WebSocket("ws://localhost:8080/ws");
 				
                ws.onopen = function() {
                   
                   ws.send("Message to send");
-                  alert("Message is sent...");
                };
 				
                ws.onmessage = function (evt) { 
                 var received_msg = evt.data;
-                var para = document.createElement("p");                       // Create a <p> node
-                var t = document.createTextNode(received_msg);      // Create a text node
-                para.appendChild(t);                                          // Append the text to <p>
-                document.getElementById("myDIV").appendChild(para);           // Append <p> to <div> with id="myDIV"
-
+                var para = document.createElement("p");                       
+                var t = document.createTextNode(received_msg);      
+                para.appendChild(t);                                          
+                document.getElementById("myDIV").appendChild(para);           
                };
 				
                ws.onclose = function() { 
                   
-                  // websocket is closed.
-                  alert("Connection is closed..."); 
                };
             } else {
               
-               // The browser doesn't support WebSocket
-               alert("WebSocket NOT supported by your Browser!");
             }
          } 
         WebSocketTest(); 
